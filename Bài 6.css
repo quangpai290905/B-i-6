@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #ff9800; /* Màu cam */
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+    color: white;
+    font-size: 24px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5); /* Đổ bóng */
+}
+
+.nav {
+    background-color: #15aa9b;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 18px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5); /* Đổ bóng */
+}
+
+.content {
+    width: 100%;
+    overflow: hidden; /* Để ngăn các phần tử con nổi ra ngoài */
+}
+
+.article {
+    background-color: #ffeb3b; /* Màu vàng */
+    width: 70%;
+    height: 300px;
+    float: left;
+    text-align: center;
+    line-height: 300px;
+    color: white;
+    font-size: 18px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);/* Đổ bóng */
+}
+
+.aside {
+    background-color: #f44336; /* Màu đỏ */
+    width: 30%;
+    height: 300px;
+    float: left;
+    text-align: center;
+    line-height: 300px;
+    color: white;
+    font-size: 18px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5); /* Đổ bóng */
+}
+
+.footer {
+    background-color: #9c27b0; /* Màu tím */
+    clear: both;
+    height: 220px;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    font-size: 18px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5); /* Đổ bóng */
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Điều chỉnh kích thước theo yêu cầu */
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* Hiệu ứng đổ bóng nâng cao cho toàn bộ phần tử */
+.header, .nav, .article, .aside, .footer {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng kép */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng mượt mà */
+}
+
+/* Tăng cường hiệu ứng khi di chuột */
+.header:hover, .nav:hover, .article:hover, .aside:hover, .footer:hover {
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4), 0 10px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng mạnh hơn */
+    transform: translateY(-10px); /* Phần tử nổi lên */
+}
+
+/* Hiệu ứng đổ bóng riêng cho .article và .aside */
+.article {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 4px rgba(0, 0, 0, 0.2); /* Đổ bóng riêng cho .article */
+}
+
+.aside {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 4px rgba(0, 0, 0, 0.2); /* Đổ bóng riêng cho .aside */
+}
+
+/* Khi di chuột vào .article và .aside, hiệu ứng nổi lên mạnh hơn */
+.article:hover, .aside:hover {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.3); /* Tăng hiệu ứng bóng khi di chuột */
+}
+/* Adding deeper inner shadow to .header, .nav, .article, .aside, .footer */
+.header, .nav, .article, .aside, .footer {
+    box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.5); /* Deeper inner shadow */
+}
+
+/* Adjusting hover effects to retain both deeper inner and outer shadows */
+.header:hover, .nav:hover, .article:hover, .aside:hover, .footer:hover {
+    box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.5), /* Deeper inner shadow */
+                0 15px 25px rgba(0, 0, 0, 0.4), /* Outer shadow */
+                0 10px 10px rgba(0, 0, 0, 0.2); /* Outer shadow */
+    transform: translateY(-10px); /* Lift on hover */
+}
+
+/* Adding even stronger inner shadow to .article and .aside */
+.article, .aside {
+    box-shadow: inset 0 12px 24px rgba(0, 0, 0, 0.6), /* Even deeper inner shadow */
+                0 8px 16px rgba(0, 0, 0, 0.3), /* Outer shadow */
+                0 4px 4px rgba(0, 0, 0, 0.2); /* Outer shadow */
+}
+
+/* Stronger hover effect for .article and .aside */
+.article:hover, .aside:hover {
+    box-shadow: inset 0 12px 24px rgba(0, 0, 0, 0.6), /* Deep inner shadow */
+                0 20px 30px rgba(0, 0, 0, 0.5), /* Outer shadow */
+                0 10px 10px rgba(0, 0, 0, 0.3); /* Outer shadow */
+}
